@@ -10,6 +10,7 @@ export default class WelcomePage extends React.Component {
         return (
             <React.Fragment>
                 <h1>Welcome</h1>
+                <i className={'iconfont icon-feibiao'}/>
             </React.Fragment>
         );
     }

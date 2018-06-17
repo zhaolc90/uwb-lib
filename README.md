@@ -31,7 +31,16 @@ Describe uwb-lib here.
 # test
 - [ ] Test cases
 
-
+```css
+@font-face {
+  font-family: 'iconfont';  /* project id 710882 */
+  src: url('//at.alicdn.com/t/font_710882_zdze8z8ywh.eot');
+  src: url('//at.alicdn.com/t/font_710882_zdze8z8ywh.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_710882_zdze8z8ywh.woff') format('woff'),
+  url('//at.alicdn.com/t/font_710882_zdze8z8ywh.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_710882_zdze8z8ywh.svg#iconfont') format('svg');
+}
+```
 
 ```console
 npm i nwb -g

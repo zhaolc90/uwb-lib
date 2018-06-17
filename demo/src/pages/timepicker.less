@@ -1,0 +1,18 @@
+@timepickerPrefixCls: uwb-timepicker;
+
+.@{timepickerPrefixCls} {
+    height: 40px;
+    position: relative;
+    &-input{
+        height: 40px;
+    }
+    &-input +span:after{
+        content: '\e61a';
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+    &-input:focus +span:after{
+        display: none;
+    }
+}

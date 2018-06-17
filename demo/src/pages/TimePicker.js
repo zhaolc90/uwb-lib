@@ -1,23 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Toggle } from '../../../lib'
+import './timepicker.less'
+import classNames from 'classnames'
 
-const propTypes = {};
+const propTypes = {
 
-const defaultProps = {};
+};
 
-export default class TimePickerPage extends React.Component {
+const defaultProps = {
+    prefixCls: 'uwb-timepicker',
+    placeholder: 'hh:mm'
+};
+
+export default class TimePicker extends React.Component {
     render() {
+        const { prefixCls, className, placeholder, ...props } = this.props
+        
+        const timepickerClassName = classNames({
+            [className]: !!className,
+            [prefixCls]: true,
+            // [`${prefixCls}-disabled`]: disabled,
+        });
         return (
-            <React.Fragment>
-                <h2>TimePicker</h2>
-                <input/>
-                <hr/>
-                ...
-            </React.Fragment>
+            <div>
+                <span className={timepickerClassName}>
+                    <input
+                        className={`${prefixCls}-input`}
+                        placeholder={placeholder}
+                    />
+                    {/* <i className={'iconfont icon-huatong'}/> */}
+                    <span/>
+                </span>
+            </div>
         );
     }
 }
 
-TimePickerPage.propTypes = propTypes;
-TimePickerPage.defaultProps = defaultProps;
+TimePicker.propTypes = propTypes;
+TimePicker.defaultProps = defaultProps;

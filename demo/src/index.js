@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import { Navbar } from '../../lib'
 import '../../css/style.css'
+import './index.css'
+import './style/iconfont.css'
 
 import urls from './utils'
 
@@ -17,7 +19,7 @@ const Slider = (props) => {
   return (
     <ul role="nav">
       {props.urls.map((item, i) =>
-        <li><Link key={i} to={item.path}>{item.name}</Link></li>)
+        <li key={i}><Link to={item.path}>{item.name}</Link></li>)
       }
     </ul>
   )
@@ -43,7 +45,7 @@ class App extends Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Navbar.Text>
-                uwb-lib Demo
+                uwb-lib demo
               </Navbar.Text>
               <Navbar.Text pullRight>Have a great day!</Navbar.Text>
             </Navbar.Collapse>
