@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Toggle } from '../../../lib'
+const ReactMarkdown = require('react-markdown')
+
+const input = require('./todo.md')
 
 const propTypes = {};
 
@@ -10,13 +13,8 @@ export default class About extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h2>Toggle</h2>
-                <Toggle onClick={(e) => {console.log(e,'toggle clicked!')}}/>
-                <hr/>
-                <h2>TimePicker</h2>
-                <input/>
-                <hr/>
-                ...
+                <h2>todo</h2>
+                <ReactMarkdown source={input} />
             </React.Fragment>
         );
     }

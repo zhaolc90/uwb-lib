@@ -26,6 +26,12 @@ Describe uwb-lib here.
 # components
 - [ ] TimePicker
 - [ ] Nav
+# pages
+- [x] Simple route
+# test
+- [ ] Test cases
+
+
 
 ```console
 npm i nwb -g

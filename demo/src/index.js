@@ -1,17 +1,34 @@
 import React, {Component} from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import {Grid, Col, Row} from 'react-bootstrap'
 import 'normalize.css/normalize.css'
 import 'bootstrap/dist/css/bootstrap.css'
 
 import { Navbar } from '../../lib'
 import '../../css/style.css'
 
-import About from './pages/About'
-import WelcomePage from './pages/WelcomePage'
+import urls from './utils'
+
 const NoMatch = (props) => {
   return <span>Nothing found</span>
 }
+const Slider = (props) => {
+  return (
+    <ul role="nav">
+      {props.urls.map((item, i) =>
+        <li><Link key={i} to={item.path}>{item.name}</Link></li>)
+      }
+    </ul>
+  )
+}
+const PageContainer = (props) => {
+  return (
+      props.urls.map((item, i) =>
+        <Route key={i} exact={item.exact} path={item.path} component={item.Page.default} />)
+  )
+}
+
 class App extends Component {
   render() {
     return (
@@ -20,7 +37,7 @@ class App extends Component {
           <Navbar>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href="#home">Design-Site</a>
+                <a href="/">Design-Site</a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -32,14 +49,18 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
           <div className={"container-fluid"}>
-            <Switch>
-              <Route exact path="/" component={WelcomePage}/>
-              <Route path="/about" component={About}/>
-              {/* <Route path="users" component={Users}>
-                <Route path="/user/:userId" component={User}/>
-              </Route> */}
-              <Route path="*" component={NoMatch}/>
-            </Switch>
+          <Grid>
+            <Row className="show-grid">
+              <Col xs={6} md={2}>
+                <Slider urls={urls}/>
+              </Col>
+              <Col xs={10} md={10}>
+                <Switch>
+                    <PageContainer urls={urls}/>
+                </Switch>
+              </Col>
+            </Row>
+          </Grid>
           </div>
         </div>
       </BrowserRouter>
