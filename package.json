@@ -1,6 +1,6 @@
 {
   "name": "uwb-lib",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "uwb-lib React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -20,8 +20,7 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "less": "^2.7.3"
+    "classnames": "^2.2.6"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -29,6 +28,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-less": "^3.5.0",
+    "less": "^2.7.3",
     "nwb": "0.21.x",
     "nwb-less": "^0.7.0",
     "react": "^16.4.1",
