@@ -2,7 +2,7 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
+import {Toggle} from '../lib'
 
 describe('Component', () => {
   let node
@@ -16,8 +16,14 @@ describe('Component', () => {
   })
 
   it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
+    render(<Toggle/>, node, () => {
       expect(node.innerHTML).toContain('Welcome to React components')
     })
+  })
+})
+
+describe('Minimal unit test', () => {
+  it('informs the reader', () => {
+    expect('tautology').toEqual('tautology')
   })
 })

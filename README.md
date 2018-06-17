@@ -16,16 +16,22 @@ Describe uwb-lib here.
 [coveralls]: https://coveralls.io/github/user/repo
 
 # Todo
-- [ ] less support
-- [ ] prefixCls
+- [x] less support
+- [x] prefixCls
 - [ ] font
-- [ ] using umd es in project
-- [ ] publish seperate package
-- [ ] import from dir/** index.js
+- [ ] add demo route
+- [x] using es in project
+- [x] publish seperate package
+- [x] import from dir/** index.js
+# components
+- [ ] TimePicker
+- [ ] Nav
 
 ```console
 npm i nwb -g
 nwb new react-component uwb-lib
 cd uwb-lib
-npm install --save-dev nwb-less
+npm i gulp gulp-less
+
+add script
 ```

@@ -20,16 +20,20 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "classnames": "^2.2.6"
+    "bootstrap": "^3.3.7",
+    "classnames": "^2.2.6",
+    "normalize.css": "^8.0.0",
+    "react-bootstrap": "^0.32.1"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
+    "@types/expect": "^1.20.3",
     "gulp": "^3.9.1",
     "gulp-less": "^3.5.0",
     "less": "^2.7.3",
-    "nwb": "0.21.x",
+    "nwb": "^0.22.0",
     "nwb-less": "^0.7.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
