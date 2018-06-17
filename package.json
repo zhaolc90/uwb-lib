@@ -1,6 +1,6 @@
 {
   "name": "uwb-lib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "uwb-lib React component",
   "main": "lib/index.js",
   "module": "es/index.js",
