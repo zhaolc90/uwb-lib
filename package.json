@@ -1,6 +1,6 @@
 {
   "name": "uwb-lib",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "uwb-lib React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -36,7 +36,8 @@
     "nwb": "^0.22.0",
     "nwb-less": "^0.7.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
   },
   "author": "",
   "homepage": "",
